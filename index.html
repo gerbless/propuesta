@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta de transformación — Ingeniería de datos</title>
+  <meta name="description" content="Propuesta de transformación del área de Ingeniería de Datos: 18 meses hacia una organización DataOps orientada a productos de datos.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">DE</div>
+      <div>
+        <div class="logo-text">Ingeniería de Datos</div>
+        <div class="logo-sub">Propuesta de Transformación</div>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <a href="#situacion" class="nav-link">Situación</a>
+      <a href="#vision" class="nav-link">Visión</a>
+      <a href="#fases" class="nav-link">Fases</a>
+      <a href="#beneficios" class="nav-link">Beneficios</a>
+      <a href="#indicadores" class="nav-link">Indicadores</a>
+      <a href="#glosario" class="nav-link">Glosario</a>
+    </nav>
+    <a href="#glosario" class="btn-glossary">📖 Glosario Técnico</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Propuesta estratégica · 18 meses · 6 fases
+    </div>
+    <h1 class="hero-title">
+      Transformación del área de<br>
+      <span class="highlight">ingeniería de datos</span>
+    </h1>
+    <p class="hero-subtitle">
+      Evolucionar desde un modelo reactivo y dependiente de procesos manuales hacia
+      una organización orientada a <a class="term-link" data-term="data-products" href="definitions/data-products.html">productos de datos</a>,
+      automatización y mejora continua sobre <a class="term-link" data-term="databricks" href="definitions/databricks.html">Databricks</a>.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">18</div>
+        <div class="hero-stat-label">Meses de transformación</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">6</div>
+        <div class="hero-stat-label">Fases graduales</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">20%</div>
+        <div class="hero-stat-label">Capacidad reservada</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">+50%</div>
+        <div class="hero-stat-label">Despliegues automatizados</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style="height:56px">
+      <path d="M0,32 C360,60 1080,0 1440,32 L1440,56 L0,56 Z" fill="#f8fafc"/>
+    </svg>
+  </div>
+</section>
+
+<!-- RESUMEN EJECUTIVO -->
+<section class="section-white" id="resumen">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Resumen ejecutivo</div>
+      <h2 class="section-title">Una transformación en tres dimensiones</h2>
+      <p class="section-description">
+        El área de Ingeniería de Datos ha crecido para responder a las necesidades del negocio,
+        pero actualmente presenta oportunidades de mejora en tres dimensiones clave que esta propuesta aborda de forma integral.
+      </p>
+    </div>
+    <div class="challenges-grid">
+      <div class="challenge-card animate-on-scroll">
+        <div class="challenge-icon">⚡</div>
+        <div class="challenge-content">
+          <h3>Procesos de Trabajo y Priorización</h3>
+          <p>Establecer un <a class="term-link" data-term="backlog" href="definitions/backlog.html">backlog</a> único, priorización transparente y gestión visual del trabajo para que el equipo opere de forma coordinada y predecible.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-1">
+        <div class="challenge-icon">🔧</div>
+        <div class="challenge-content">
+          <h3>Estandarización y Automatización</h3>
+          <p>Adoptar <a class="term-link" data-term="git" href="definitions/git.html">Git</a>, <a class="term-link" data-term="pull-requests" href="definitions/pull-requests.html">Pull Requests</a> y <a class="term-link" data-term="cicd" href="definitions/cicd.html">CI/CD</a> como estándares de ingeniería para reducir tareas manuales y aumentar la confiabilidad de los despliegues.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-2">
+        <div class="challenge-icon">🏛️</div>
+        <div class="challenge-content">
+          <h3>Gobierno y Escalabilidad</h3>
+          <p>Consolidar el <a class="term-link" data-term="data-governance" href="definitions/data-governance.html">gobierno de datos</a> mediante <a class="term-link" data-term="unity-catalog" href="definitions/unity-catalog.html">Unity Catalog</a>, definir <a class="term-link" data-term="ownership" href="definitions/ownership.html">ownership</a> formal y establecer <a class="term-link" data-term="sla" href="definitions/sla.html">SLAs</a> medibles sobre los activos críticos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITUACIÓN ACTUAL -->
+<section class="section-gray" id="situacion">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Situación actual</div>
+      <h2 class="section-title">Desafíos del crecimiento acelerado</h2>
+      <p class="section-description">
+        Se observan patrones comunes en organizaciones que han experimentado un crecimiento acelerado
+        sin tiempo suficiente para consolidar prácticas de ingeniería.
+      </p>
+    </div>
+    <div class="challenges-grid">
+      <div class="challenge-card animate-on-scroll">
+        <div class="challenge-icon" style="background:#fff7ed">⏳</div>
+        <div class="challenge-content">
+          <h3>Alta dependencia de tareas manuales</h3>
+          <p>Procesos operativos sin automatizar consumen capacidad del equipo que podría destinarse a entregar valor al negocio.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-1">
+        <div class="challenge-icon" style="background:#fff7ed">🔀</div>
+        <div class="challenge-content">
+          <h3>Procesos heterogéneos entre equipos</h3>
+          <p>Cada miembro trabaja de forma diferente, lo que dificulta la colaboración, la revisión de código y la incorporación de nuevas personas.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-2">
+        <div class="challenge-icon" style="background:#fff7ed">📋</div>
+        <div class="challenge-content">
+          <h3>Ausencia de estándares de desarrollo</h3>
+          <p>Sin estándares de <a class="term-link" data-term="git" href="definitions/git.html">control de versiones</a> y despliegue, el código vive en silos y los cambios son riesgosos.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-3">
+        <div class="challenge-icon" style="background:#fff7ed">📊</div>
+        <div class="challenge-content">
+          <h3>Limitada visibilidad operativa</h3>
+          <p>Sin métricas de desempeño ni <a class="term-link" data-term="observabilidad" href="definitions/observabilidad.html">observabilidad</a>, los problemas se detectan cuando el negocio los reporta, no antes.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll">
+        <div class="challenge-icon" style="background:#fff7ed">👤</div>
+        <div class="challenge-content">
+          <h3>Dependencia en conocimiento individual</h3>
+          <p>El conocimiento crítico sobre los <a class="term-link" data-term="pipeline" href="definitions/pipeline.html">pipelines</a> y procesos está concentrado en pocas personas, generando riesgo operativo.</p>
+        </div>
+      </div>
+      <div class="challenge-card animate-on-scroll delay-1">
+        <div class="challenge-icon" style="background:#fff7ed">🔑</div>
+        <div class="challenge-content">
+          <h3>Falta de ownership formal</h3>
+          <p>Sin <a class="term-link" data-term="ownership" href="definitions/ownership.html">ownership</a> definido, la responsabilidad sobre la <a class="term-link" data-term="data-quality" href="definitions/data-quality.html">calidad de datos</a> es difusa y los problemas quedan sin dueño.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIÓN OBJETIVO -->
+<section class="section-dark" id="vision">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Visión objetivo</div>
+      <h2 class="section-title">Una plataforma habilitadora del negocio</h2>
+      <p class="section-description">
+        Construir una organización de Ingeniería de Datos que entregue valor de forma predecible,
+        opere bajo principios <a class="term-link" data-term="dataops" href="definitions/dataops.html" style="color:#5eead4;border-color:#5eead4">DataOps</a>
+        y se posicione como plataforma estratégica para las iniciativas analíticas y de
+        <a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html" style="color:#5eead4;border-color:#5eead4">inteligencia artificial</a> del negocio.
+      </p>
+    </div>
+    <div class="vision-pillars">
+      <div class="pillar-card animate-on-scroll">
+        <span class="pillar-icon">🎯</span>
+        <div class="pillar-title">Entrega Predecible</div>
+        <div class="pillar-desc">Compromisos de <a class="term-link" data-term="sla" href="definitions/sla.html" style="color:#5eead4;border-color:#5eead4">SLA</a> medibles y menor <a class="term-link" data-term="time-to-market" href="definitions/time-to-market.html" style="color:#5eead4;border-color:#5eead4">time-to-market</a> para el negocio.</div>
+      </div>
+      <div class="pillar-card animate-on-scroll delay-1">
+        <span class="pillar-icon">🔄</span>
+        <div class="pillar-title">Principios DataOps</div>
+        <div class="pillar-desc">Automatización, colaboración y mejora continua como cultura operativa del equipo.</div>
+      </div>
+      <div class="pillar-card animate-on-scroll delay-2">
+        <span class="pillar-icon">⚖️</span>
+        <div class="pillar-title">Gobierno Centralizado</div>
+        <div class="pillar-desc"><a class="term-link" data-term="unity-catalog" href="definitions/unity-catalog.html" style="color:#5eead4;border-color:#5eead4">Unity Catalog</a> como fuente única de verdad para el gobierno y la <a class="term-link" data-term="trazabilidad" href="definitions/trazabilidad.html" style="color:#5eead4;border-color:#5eead4">trazabilidad</a> de datos.</div>
+      </div>
+      <div class="pillar-card animate-on-scroll delay-3">
+        <span class="pillar-icon">📦</span>
+        <div class="pillar-title">Productos de Datos</div>
+        <div class="pillar-desc">Activos de datos con <a class="term-link" data-term="ownership" href="definitions/ownership.html" style="color:#5eead4;border-color:#5eead4">ownership</a>, documentación y contratos de interfaz definidos.</div>
+      </div>
+      <div class="pillar-card animate-on-scroll delay-4">
+        <span class="pillar-icon">🤖</span>
+        <div class="pillar-title">IA para Productividad</div>
+        <div class="pillar-desc"><a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html" style="color:#5eead4;border-color:#5eead4">Inteligencia artificial</a> como amplificador de la capacidad del equipo de ingeniería.</div>
+      </div>
+      <div class="pillar-card animate-on-scroll delay-5">
+        <span class="pillar-icon">🔭</span>
+        <div class="pillar-title">Observabilidad Total</div>
+        <div class="pillar-desc">Monitoreo proactivo de <a class="term-link" data-term="pipeline" href="definitions/pipeline.html" style="color:#5eead4;border-color:#5eead4">pipelines</a> y <a class="term-link" data-term="data-quality" href="definitions/data-quality.html" style="color:#5eead4;border-color:#5eead4">calidad de datos</a> con alertas automáticas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASES DE IMPLEMENTACIÓN -->
+<section class="section-white" id="fases">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Estrategia de implementación</div>
+      <h2 class="section-title">6 fases de transformación gradual</h2>
+      <p class="section-description">
+        Cada fase construye sobre la anterior, reservando un 20% de la capacidad del equipo para mejora continua,
+        sin interrumpir la operación actual.
+      </p>
+    </div>
+
+    <!-- Phase Tabs -->
+    <div class="phases-nav">
+      <button class="phase-tab active" data-phase="1" style="--tab-color:#f59e0b">
+        <span class="phase-num" style="background:#f59e0b">1</span>
+        Orden operacional
+      </button>
+      <button class="phase-tab" data-phase="2" style="--tab-color:#3b82f6">
+        <span class="phase-num" style="background:#3b82f6">2</span>
+        Fundamentos de ingeniería
+      </button>
+      <button class="phase-tab" data-phase="3" style="--tab-color:#10b981">
+        <span class="phase-num" style="background:#10b981">3</span>
+        Automatización
+      </button>
+      <button class="phase-tab" data-phase="4" style="--tab-color:#8b5cf6">
+        <span class="phase-num" style="background:#8b5cf6">4</span>
+        Gobierno y escalabilidad
+      </button>
+      <button class="phase-tab" data-phase="5" style="--tab-color:#0891b2">
+        <span class="phase-num" style="background:#0891b2">5</span>
+        DataOps y observabilidad
+      </button>
+      <button class="phase-tab" data-phase="6" style="--tab-color:#db2777">
+        <span class="phase-num" style="background:#db2777">6</span>
+        IA para productividad
+      </button>
+    </div>
+
+    <!-- Phase 1 -->
+    <div class="phase-content active" id="phase-1">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#f59e0b">📋 Fase 1</div>
+        <h3 class="phase-title-text">Orden operacional</h3>
+        <div class="phase-period">⏱ Meses 1 – 4</div>
+        <p class="phase-description">
+          Establecer las bases del orden: un <a class="term-link" data-term="backlog" href="definitions/backlog.html">backlog</a> único y visible,
+          priorización transparente acordada con el negocio y gestión visual del trabajo en curso.
+          Esta fase no requiere tecnología nueva, solo disciplina de proceso.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#f59e0b"></span>Backlog único con todas las iniciativas y deuda técnica</li>
+          <li><span class="obj-dot" style="background:#f59e0b"></span>Priorización transparente con criterios acordados</li>
+          <li><span class="obj-dot" style="background:#f59e0b"></span>Gestión visual del trabajo (tablero Kanban o Scrum)</li>
+          <li><span class="obj-dot" style="background:#f59e0b"></span>Estándares básicos de documentación de desarrollos</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#f59e0b;color:#d97706;background:#fffbeb">Azure DevOps</span>
+            <span class="tool-tag" style="border-color:#f59e0b;color:#d97706;background:#fffbeb">Jira</span>
+            <span class="tool-tag" style="border-color:#f59e0b;color:#d97706;background:#fffbeb">Confluence</span>
+            <span class="tool-tag" style="border-color:#f59e0b;color:#d97706;background:#fffbeb">Tablero Kanban</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Visibilidad del trabajo</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="85%" style="background:#f59e0b"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Priorización clara</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="80%" style="background:#f59e0b"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Reducción de interrupciones</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="60%" style="background:#f59e0b"></div></div>
+              <span class="impact-pct">Media</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div class="phase-content" id="phase-2">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#3b82f6">🌿 Fase 2</div>
+        <h3 class="phase-title-text">Fundamentos de ingeniería</h3>
+        <div class="phase-period">⏱ Meses 4 – 7</div>
+        <p class="phase-description">
+          Adoptar <a class="term-link" data-term="git" href="definitions/git.html">Git</a> como estándar de versionado y los
+          <a class="term-link" data-term="pull-requests" href="definitions/pull-requests.html">Pull Requests</a> como mecanismo
+          obligatorio de revisión. Definir buenas prácticas de desarrollo y establecer controles de
+          <a class="term-link" data-term="data-quality" href="definitions/data-quality.html">calidad de datos</a> mínimos.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#3b82f6"></span>Git como estándar para todo el código de producción</li>
+          <li><span class="obj-dot" style="background:#3b82f6"></span>Pull Requests obligatorios con revisión por pares</li>
+          <li><span class="obj-dot" style="background:#3b82f6"></span>Definición de buenas prácticas de desarrollo acordadas</li>
+          <li><span class="obj-dot" style="background:#3b82f6"></span>Controles de calidad mínimos en cada pipeline</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#3b82f6;color:#2563eb;background:#eff6ff">GitHub</span>
+            <span class="tool-tag" style="border-color:#3b82f6;color:#2563eb;background:#eff6ff">Azure Repos</span>
+            <span class="tool-tag" style="border-color:#3b82f6;color:#2563eb;background:#eff6ff">Pre-commit hooks</span>
+            <span class="tool-tag" style="border-color:#3b82f6;color:#2563eb;background:#eff6ff">Code Review</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Calidad de código</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="75%" style="background:#3b82f6"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Transferencia de conocimiento</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="70%" style="background:#3b82f6"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Reducción de errores</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="65%" style="background:#3b82f6"></div></div>
+              <span class="impact-pct">Media</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="phase-content" id="phase-3">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#10b981">🚀 Fase 3</div>
+        <h3 class="phase-title-text">Automatización</h3>
+        <div class="phase-period">⏱ Meses 7 – 10</div>
+        <p class="phase-description">
+          Implementar <a class="term-link" data-term="cicd" href="definitions/cicd.html">CI/CD</a> para automatizar los despliegues,
+          eliminar tareas repetitivas y liberar capacidad operativa. Los
+          <a class="term-link" data-term="pipeline" href="definitions/pipeline.html">pipelines</a> pasan de gestionarse manualmente
+          a desplegarse automáticamente tras pasar pruebas de validación.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#10b981"></span>Pipelines de CI/CD para notebooks y jobs de Databricks</li>
+          <li><span class="obj-dot" style="background:#10b981"></span>Automatización de despliegues a ambientes de QA y producción</li>
+          <li><span class="obj-dot" style="background:#10b981"></span>Reducción de tareas manuales repetitivas en un 40%</li>
+          <li><span class="obj-dot" style="background:#10b981"></span>Liberación de capacidad operativa para nuevas iniciativas</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#10b981;color:#059669;background:#f0fdf4">GitHub Actions</span>
+            <span class="tool-tag" style="border-color:#10b981;color:#059669;background:#f0fdf4">Azure DevOps Pipelines</span>
+            <span class="tool-tag" style="border-color:#10b981;color:#059669;background:#f0fdf4">Databricks CLI</span>
+            <span class="tool-tag" style="border-color:#10b981;color:#059669;background:#f0fdf4">Terraform</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Despliegues automáticos</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="90%" style="background:#10b981"></div></div>
+              <span class="impact-pct">+50%</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Reducción tareas manuales</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="75%" style="background:#10b981"></div></div>
+              <span class="impact-pct">-40%</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Velocidad de entrega</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="80%" style="background:#10b981"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="phase-content" id="phase-4">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#8b5cf6">⚖️ Fase 4</div>
+        <h3 class="phase-title-text">Gobierno y escalabilidad</h3>
+        <div class="phase-period">⏱ Meses 10 – 13</div>
+        <p class="phase-description">
+          Consolidar <a class="term-link" data-term="unity-catalog" href="definitions/unity-catalog.html">Unity Catalog</a> como
+          plataforma de <a class="term-link" data-term="data-governance" href="definitions/data-governance.html">gobierno de datos</a>,
+          definir <a class="term-link" data-term="ownership" href="definitions/ownership.html">ownership</a> formal sobre activos críticos
+          y establecer <a class="term-link" data-term="sla" href="definitions/sla.html">SLAs</a> medibles para los consumidores de datos.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#8b5cf6"></span>Unity Catalog consolidado como catálogo único de datos</li>
+          <li><span class="obj-dot" style="background:#8b5cf6"></span>Ownership definido para todos los activos críticos</li>
+          <li><span class="obj-dot" style="background:#8b5cf6"></span>SLAs establecidos y comunicados al negocio</li>
+          <li><span class="obj-dot" style="background:#8b5cf6"></span>Trazabilidad automática activada en todos los dominios</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#8b5cf6;color:#7c3aed;background:#f5f3ff">Unity Catalog</span>
+            <span class="tool-tag" style="border-color:#8b5cf6;color:#7c3aed;background:#f5f3ff">Databricks Lineage</span>
+            <span class="tool-tag" style="border-color:#8b5cf6;color:#7c3aed;background:#f5f3ff">Data Catalog</span>
+            <span class="tool-tag" style="border-color:#8b5cf6;color:#7c3aed;background:#f5f3ff">RBAC policies</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Confianza en datos</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="85%" style="background:#8b5cf6"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Reducción de silos</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="78%" style="background:#8b5cf6"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Cumplimiento regulatorio</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="70%" style="background:#8b5cf6"></div></div>
+              <span class="impact-pct">Medio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 5 -->
+    <div class="phase-content" id="phase-5">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#0891b2">🔭 Fase 5</div>
+        <h3 class="phase-title-text">DataOps y observabilidad</h3>
+        <div class="phase-period">⏱ Meses 13 – 16</div>
+        <p class="phase-description">
+          Implementar <a class="term-link" data-term="observabilidad" href="definitions/observabilidad.html">observabilidad</a>
+          completa sobre los <a class="term-link" data-term="pipeline" href="definitions/pipeline.html">pipelines</a> y la
+          <a class="term-link" data-term="data-quality" href="definitions/data-quality.html">calidad de datos</a>,
+          con métricas operativas, alertas proactivas y un modelo de gestión de incidentes que
+          anticipe los problemas antes de que el negocio los detecte.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#0891b2"></span>Monitoreo proactivo de todos los pipelines críticos</li>
+          <li><span class="obj-dot" style="background:#0891b2"></span>Métricas de calidad de datos automatizadas</li>
+          <li><span class="obj-dot" style="background:#0891b2"></span>Dashboard operativo del equipo de ingeniería</li>
+          <li><span class="obj-dot" style="background:#0891b2"></span>Gestión proactiva de incidentes con MTTR definido</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#0891b2;color:#0e7490;background:#ecfeff">Databricks Workflows Monitor</span>
+            <span class="tool-tag" style="border-color:#0891b2;color:#0e7490;background:#ecfeff">Great Expectations</span>
+            <span class="tool-tag" style="border-color:#0891b2;color:#0e7490;background:#ecfeff">DataDog / Grafana</span>
+            <span class="tool-tag" style="border-color:#0891b2;color:#0e7490;background:#ecfeff">PagerDuty</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Detección proactiva</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="90%" style="background:#0891b2"></div></div>
+              <span class="impact-pct">+80%</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Reducción de incidentes</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="65%" style="background:#0891b2"></div></div>
+              <span class="impact-pct">-30%</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">MTTR (tiempo resolución)</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="72%" style="background:#0891b2"></div></div>
+              <span class="impact-pct">-40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase 6 -->
+    <div class="phase-content" id="phase-6">
+      <div class="phase-detail-card">
+        <div class="phase-badge" style="background:#db2777">🤖 Fase 6</div>
+        <h3 class="phase-title-text">IA para productividad</h3>
+        <div class="phase-period">⏱ Meses 16 – 18</div>
+        <p class="phase-description">
+          Incorporar <a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html">inteligencia artificial</a>
+          como amplificador de la productividad del equipo: asistencia al desarrollo de código,
+          documentación automática de <a class="term-link" data-term="data-products" href="definitions/data-products.html">productos de datos</a>
+          y optimización de procesos de soporte, aprovechando las capacidades nativas de
+          <a class="term-link" data-term="databricks" href="definitions/databricks.html">Databricks</a>.
+        </p>
+        <div class="objectives-label">OBJETIVOS CLAVE</div>
+        <ul class="objectives-list">
+          <li><span class="obj-dot" style="background:#db2777"></span>Asistentes de IA integrados en el flujo de desarrollo</li>
+          <li><span class="obj-dot" style="background:#db2777"></span>Automatización de documentación de activos de datos</li>
+          <li><span class="obj-dot" style="background:#db2777"></span>Optimización de consultas SQL asistida por IA</li>
+          <li><span class="obj-dot" style="background:#db2777"></span>Incremento medible en la productividad del equipo</li>
+        </ul>
+      </div>
+      <div class="phase-side">
+        <div class="phase-tools-card">
+          <div class="tools-label">HERRAMIENTAS SUGERIDAS</div>
+          <div class="tools-grid">
+            <span class="tool-tag" style="border-color:#db2777;color:#be185d;background:#fdf2f8">GitHub Copilot</span>
+            <span class="tool-tag" style="border-color:#db2777;color:#be185d;background:#fdf2f8">Databricks Assistant</span>
+            <span class="tool-tag" style="border-color:#db2777;color:#be185d;background:#fdf2f8">Azure OpenAI</span>
+            <span class="tool-tag" style="border-color:#db2777;color:#be185d;background:#fdf2f8">LLM Doc Gen</span>
+          </div>
+        </div>
+        <div class="phase-impact-card">
+          <div class="impact-label-title">IMPACTO ESPERADO</div>
+          <div class="impact-rows">
+            <div class="impact-row">
+              <span class="impact-row-label">Productividad del equipo</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="85%" style="background:#db2777"></div></div>
+              <span class="impact-pct">+30%</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Documentación automática</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="80%" style="background:#db2777"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+            <div class="impact-row">
+              <span class="impact-row-label">Cobertura de conocimiento</span>
+              <div class="impact-bar"><div class="impact-fill" data-width="75%" style="background:#db2777"></div></div>
+              <span class="impact-pct">Alta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="section-gray" id="beneficios">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Beneficios esperados</div>
+      <h2 class="section-title">Impacto en tres dimensiones</h2>
+      <p class="section-description">La transformación genera beneficios operacionales, técnicos y de negocio que se potencian entre sí a lo largo de las fases.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-category animate-on-scroll">
+        <div class="benefit-cat-header">
+          <div class="benefit-cat-icon" style="background:#fff7ed">⚙️</div>
+          <div class="benefit-cat-title">Operacionales</div>
+        </div>
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-check" style="background:#f59e0b">✓</div>
+            Reducción de 30–40% en actividades manuales mediante automatización de <a class="term-link" data-term="pipeline" href="definitions/pipeline.html">pipelines</a>
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#f59e0b">✓</div>
+            Menor dependencia de personas específicas gracias al <a class="term-link" data-term="ownership" href="definitions/ownership.html">ownership</a> formal y documentación
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#f59e0b">✓</div>
+            Mayor estabilidad operativa por <a class="term-link" data-term="observabilidad" href="definitions/observabilidad.html">observabilidad</a> proactiva
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#f59e0b">✓</div>
+            Menor tiempo de resolución de incidentes con MTTR definido
+          </li>
+        </ul>
+      </div>
+      <div class="benefit-category animate-on-scroll delay-1">
+        <div class="benefit-cat-header">
+          <div class="benefit-cat-icon" style="background:#eff6ff">🔬</div>
+          <div class="benefit-cat-title">Técnicos</div>
+        </div>
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-check" style="background:#3b82f6">✓</div>
+            Mayor <a class="term-link" data-term="data-quality" href="definitions/data-quality.html">calidad de datos</a> con validaciones automáticas en cada pipeline
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#3b82f6">✓</div>
+            Mejor <a class="term-link" data-term="trazabilidad" href="definitions/trazabilidad.html">trazabilidad</a> con linaje automático en Unity Catalog
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#3b82f6">✓</div>
+            Despliegues más seguros con <a class="term-link" data-term="cicd" href="definitions/cicd.html">CI/CD</a> y gates de calidad
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#3b82f6">✓</div>
+            Mayor reutilización de componentes y reducción de deuda técnica
+          </li>
+        </ul>
+      </div>
+      <div class="benefit-category animate-on-scroll delay-2">
+        <div class="benefit-cat-header">
+          <div class="benefit-cat-icon" style="background:#f0fdf4">📈</div>
+          <div class="benefit-cat-title">Negocio</div>
+        </div>
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-check" style="background:#10b981">✓</div>
+            Menor <a class="term-link" data-term="time-to-market" href="definitions/time-to-market.html">time-to-market</a> para nuevas iniciativas analíticas
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#10b981">✓</div>
+            Mayor confianza en los datos para la toma de decisiones estratégicas
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#10b981">✓</div>
+            Plataforma lista para iniciativas de <a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html">Inteligencia Artificial</a>
+          </li>
+          <li>
+            <div class="benefit-check" style="background:#10b981">✓</div>
+            Escalar capacidades analíticas con <a class="term-link" data-term="data-products" href="definitions/data-products.html">productos de datos</a> confiables
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICADORES DE ÉXITO -->
+<section class="kpi-section" id="indicadores">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Indicadores de éxito</div>
+      <h2 class="section-title">Métricas que demuestran el avance</h2>
+      <p class="section-description">Resultados concretos y medibles al finalizar los 18 meses de transformación.</p>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card animate-on-scroll">
+        <div class="kpi-value" data-target="40" data-suffix="%" data-prefix="-">0%</div>
+        <div class="kpi-label">Actividades Manuales</div>
+        <div class="kpi-desc">Reducción en tareas operativas repetitivas del equipo</div>
+      </div>
+      <div class="kpi-card animate-on-scroll delay-1">
+        <div class="kpi-value" data-target="50" data-suffix="%" data-prefix="+">0%</div>
+        <div class="kpi-label">Despliegues Automatizados</div>
+        <div class="kpi-desc">De los despliegues ejecutados mediante <a class="term-link" data-term="cicd" href="definitions/cicd.html" style="color:inherit">CI/CD</a></div>
+      </div>
+      <div class="kpi-card animate-on-scroll delay-2">
+        <div class="kpi-value" data-target="30" data-suffix="%" data-prefix="-">0%</div>
+        <div class="kpi-label">Incidentes Operativos</div>
+        <div class="kpi-desc">Disminución gracias a la <a class="term-link" data-term="observabilidad" href="definitions/observabilidad.html" style="color:inherit">observabilidad</a> proactiva</div>
+      </div>
+      <div class="kpi-card animate-on-scroll delay-3">
+        <div class="kpi-value" data-target="30" data-suffix="%" data-prefix="+">0%</div>
+        <div class="kpi-label">Productividad del Equipo</div>
+        <div class="kpi-desc">Incremento por automatización e <a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html" style="color:inherit">IA</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSARIO -->
+<section class="section-white" id="glosario">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-eyebrow">Glosario técnico</div>
+      <h2 class="section-title">Conceptos clave de esta propuesta</h2>
+      <p class="section-description">Haz clic en cualquier concepto para ver su definición, contexto y cómo aplica en esta propuesta.</p>
+    </div>
+    <div class="glossary-index">
+      <button class="glossary-item animate-on-scroll" onclick="openDef('databricks')">
+        <div class="glossary-item-icon" style="background:#eff6ff">⚡</div>
+        <div><div class="glossary-item-title">Databricks</div><div class="glossary-item-cat">Plataforma de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('dataops')">
+        <div class="glossary-item-icon" style="background:#f0fdfa">🔄</div>
+        <div><div class="glossary-item-title">DataOps</div><div class="glossary-item-cat">Metodología</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-2" onclick="openDef('unity-catalog')">
+        <div class="glossary-item-icon" style="background:#f5f3ff">🗂️</div>
+        <div><div class="glossary-item-title">Unity Catalog</div><div class="glossary-item-cat">Gobierno de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll" onclick="openDef('cicd')">
+        <div class="glossary-item-icon" style="background:#fef2f2">🚀</div>
+        <div><div class="glossary-item-title">CI/CD</div><div class="glossary-item-cat">Ingeniería de Software</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('git')">
+        <div class="glossary-item-icon" style="background:#fff7ed">🌿</div>
+        <div><div class="glossary-item-title">Git</div><div class="glossary-item-cat">Control de Versiones</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-2" onclick="openDef('pull-requests')">
+        <div class="glossary-item-icon" style="background:#f5f3ff">🔍</div>
+        <div><div class="glossary-item-title">Pull Requests</div><div class="glossary-item-cat">Ingeniería de Software</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll" onclick="openDef('data-governance')">
+        <div class="glossary-item-icon" style="background:#f5f3ff">⚖️</div>
+        <div><div class="glossary-item-title">Gobierno de Datos</div><div class="glossary-item-cat">Gobierno de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('data-products')">
+        <div class="glossary-item-icon" style="background:#f0fdf4">📦</div>
+        <div><div class="glossary-item-title">Productos de Datos</div><div class="glossary-item-cat">Arquitectura de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-2" onclick="openDef('sla')">
+        <div class="glossary-item-icon" style="background:#ecfeff">📋</div>
+        <div><div class="glossary-item-title">SLA</div><div class="glossary-item-cat">Gestión de Servicios</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll" onclick="openDef('data-quality')">
+        <div class="glossary-item-icon" style="background:#f0fdf4">✅</div>
+        <div><div class="glossary-item-title">Calidad de Datos</div><div class="glossary-item-cat">Calidad y Confiabilidad</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('pipeline')">
+        <div class="glossary-item-icon" style="background:#eff6ff">⚙️</div>
+        <div><div class="glossary-item-title">Pipeline de Datos</div><div class="glossary-item-cat">Ingeniería de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-2" onclick="openDef('backlog')">
+        <div class="glossary-item-icon" style="background:#fffbeb">📝</div>
+        <div><div class="glossary-item-title">Backlog</div><div class="glossary-item-cat">Gestión Ágil</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll" onclick="openDef('ownership')">
+        <div class="glossary-item-icon" style="background:#f5f3ff">🏛️</div>
+        <div><div class="glossary-item-title">Ownership de Datos</div><div class="glossary-item-cat">Gobierno de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('observabilidad')">
+        <div class="glossary-item-icon" style="background:#ecfeff">🔭</div>
+        <div><div class="glossary-item-title">Observabilidad</div><div class="glossary-item-cat">Operaciones</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-2" onclick="openDef('trazabilidad')">
+        <div class="glossary-item-icon" style="background:#f5f3ff">🔗</div>
+        <div><div class="glossary-item-title">Trazabilidad</div><div class="glossary-item-cat">Gobierno de Datos</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll" onclick="openDef('time-to-market')">
+        <div class="glossary-item-icon" style="background:#f0fdf4">⏱️</div>
+        <div><div class="glossary-item-title">Time-to-Market</div><div class="glossary-item-cat">Métricas de Negocio</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+      <button class="glossary-item animate-on-scroll delay-1" onclick="openDef('inteligencia-artificial')">
+        <div class="glossary-item-icon" style="background:#fdf2f8">🤖</div>
+        <div><div class="glossary-item-title">Inteligencia Artificial</div><div class="glossary-item-cat">Tecnología Emergente</div></div>
+        <span class="glossary-item-arrow">›</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSIÓN -->
+<section class="section-gray" id="conclusion">
+  <div class="container">
+    <div class="section-header animate-on-scroll" style="margin-bottom:32px">
+      <div class="section-eyebrow">Conclusión</div>
+      <h2 class="section-title">El momento es ahora</h2>
+    </div>
+    <div class="conclusion-card animate-on-scroll">
+      <div class="conclusion-text">
+        <p>
+          La organización ya dispone de una plataforma tecnológica moderna con
+          <a class="term-link" data-term="databricks" href="definitions/databricks.html">Databricks</a>.
+          El principal desafío no es incorporar nuevas tecnologías, sino evolucionar la forma de operar,
+          gobernar y escalar la Ingeniería de Datos.
+        </p>
+        <p>
+          Esta propuesta ejecuta dicha evolución de forma gradual, sostenible y compatible con la operación actual,
+          sin requerir una dedicación exclusiva del equipo. Cada fase construye sobre la anterior y entrega
+          valor incremental al negocio desde el primer mes.
+        </p>
+        <p>
+          Al finalizar los 18 meses, el área habrá evolucionado de un modelo reactivo hacia una organización
+          <a class="term-link" data-term="dataops" href="definitions/dataops.html">DataOps</a> madura, con
+          <a class="term-link" data-term="data-governance" href="definitions/data-governance.html">gobierno centralizado</a>,
+          <a class="term-link" data-term="cicd" href="definitions/cicd.html">despliegues automáticos</a>,
+          <a class="term-link" data-term="observabilidad" href="definitions/observabilidad.html">observabilidad proactiva</a>
+          e <a class="term-link" data-term="inteligencia-artificial" href="definitions/inteligencia-artificial.html">inteligencia artificial</a>
+          como amplificador de la productividad del equipo.
+        </p>
+      </div>
+      <div class="conclusion-cta">
+        <a href="#fases" class="cta-primary">🗺️ Ver el Plan de Fases</a>
+        <a href="#glosario" class="cta-secondary">📖 Explorar Glosario</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">Ingeniería de Datos</div>
+    <div class="footer-desc">Propuesta de Transformación · 18 meses · Compatible con la operación actual</div>
+    <div class="footer-links">
+      <a href="#resumen" class="footer-link">Resumen</a>
+      <span class="footer-sep">·</span>
+      <a href="#fases" class="footer-link">Fases</a>
+      <span class="footer-sep">·</span>
+      <a href="#beneficios" class="footer-link">Beneficios</a>
+      <span class="footer-sep">·</span>
+      <a href="#glosario" class="footer-link">Glosario</a>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL OVERLAY -->
+<div id="modal-overlay" class="modal-overlay"></div>
+<div id="def-panel" class="def-panel">
+  <div class="def-panel-header">
+    <div class="def-breadcrumb">
+      <a href="#">Propuesta</a> › <span>Glosario</span>
+    </div>
+    <button id="def-panel-close" class="def-panel-close" aria-label="Cerrar">✕</button>
+  </div>
+  <div id="def-panel-body" class="def-panel-body"></div>
+</div>
+
+<script src="js/definitions-data.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
