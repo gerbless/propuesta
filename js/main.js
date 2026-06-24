@@ -57,11 +57,18 @@ phaseTabs.forEach(tab => {
     const content = document.getElementById('phase-' + phase);
     if(content){
       content.classList.add('active');
-      // Animate impact bars when phase shown
+      // Re-animate impact bars
       content.querySelectorAll('.impact-fill').forEach(bar => {
+        bar.style.width = '0';
         const w = bar.dataset.width;
         setTimeout(() => { bar.style.width = w; }, 100);
       });
+      // On mobile, scroll smoothly to phase content after transition
+      if(window.innerWidth <= 640){
+        setTimeout(() => {
+          content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 80);
+      }
     }
   });
 });
